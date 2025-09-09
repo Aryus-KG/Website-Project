@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* style hero section */
+.hero-section {
+  height: 100vh;
+  /* warna background */
+  background: linear-gradient(
+      250deg,
+      rgba(176, 122, 218, 0) 45%,
+      rgba(133, 93, 215, 1) 65%
+    ),
+    url(img/phainon.png) no-repeat,
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 2px,
+      transparent 1px,
+      transparent 40px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 2px,
+      transparent 1px,
+      transparent 40px
+    ),
+    linear-gradient(
+      135deg,
+      rgba(203, 129, 201, 1) 25%,
+      rgba(133, 93, 215, 1) 100%
+    );
+
+  background-size: 285%;
+  background-position: 55% 100%;
+}
+
+.hero-section .hero-element {
+  padding: 1rem;
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.hero-section header.hero-header {
+  position: relative;
+}
+
+.hero-section header.hero-header h1 {
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+  font-size: 5rem;
+  font-weight: 400;
+  line-height: 4rem;
+}
+
+/* .hero-section h1 span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.hero-section header.hero-header span.sticker {
+  text-transform: uppercase;
+  display: inline-block;
+  font-family: "Lexend Peta", sans-serif;
+  color: white;
+  background: #3600be;
+  position: absolute;
+  top: 1.4rem;
+  line-height: 1;
+  font-size: 0.85rem;
+  padding: 0 1rem;
+}
+
+.hero-section .hero-description {
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding-bottom: 0.3rem;
+}
+
+.hero-section .btn {
+  border: 0.1rem solid white;
+}
+
+.hero-section .btn a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: white;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.hero-section .btn a {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: white;
+  font-weight: 500;
+}
+
+.hero-section .btn a:hover {
+  color: #855dd7;
+}
+
+.hero-section .btn a:hover::before {
+  width: 100%; /* isi melebar full */
+}
+
+.hero-section .btn a p.hero-cta {
+  margin-right: 0.5rem;
+}
+
+/* style hero section end */
