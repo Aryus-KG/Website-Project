@@ -14,6 +14,11 @@
       rgba(176, 122, 218, 0) 45%,
       rgba(133, 93, 215, 1) 65%
     ),
+    linear-gradient(
+      360deg,
+      rgba(133, 93, 215, 1) 0%,
+      rgba(255, 255, 255, 0) 25%
+    ),
     url(img/phainon.png) no-repeat,
     repeating-linear-gradient(
       90deg,
@@ -41,8 +46,8 @@
 
 .hero-section .hero-element {
   padding: 1rem;
-  min-height: 80vh;
-  width: 100%;
+  min-height: 70vh;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -133,7 +138,7 @@
 }
 
 .hero-section .btn a:hover::before {
-  width: 100%; /* isi melebar full */
+  width: 100%;
 }
 
 .hero-section .btn a p.hero-cta {
@@ -141,3 +146,48 @@
 }
 
 /* style hero section end */
+/* style service section */
+.service-section {
+  height: 100vh;
+  width: 100%;
+  background-color: #855dd7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.service-section .service-detail-container {
+  background-color: red;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.service-section .service-detail-container .service-detail {
+  display: grid;
+  border-radius: 0.5rem;
+  background-color: white;
+  height: 25%;
+  width: 80%;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.service-section
+  .service-detail-container
+  .service-detail
+  .service-detail-header {
+  border: 1px solid black;
+}
+
+.service-section
+  .service-detail-container
+  .service-detail
+  .service-detail-description {
+  border: 1px solid black;
+}
+/* style service section end */
