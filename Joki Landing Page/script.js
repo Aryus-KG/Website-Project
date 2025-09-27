@@ -1,14 +1,17 @@
 const menuBtn = document.querySelector("#menu-btn");
-const menuList = document.querySelector(".navbar-container");
-const chevron = document.querySelector("#chevron");
-console.log(chevron);
-const overlay = document.querySelector(".overlay");
+const navbarMenu = document.querySelector("#navbar-menu-container");
 
 function menuClick() {
-  menuList.classList.toggle("active-menu");
-  chevron.classList.toggle("muter");
   menuBtn.classList.toggle("active-menu");
-  overlay.classList.toggle("active-menu");
+  navbarMenu.classList.toggle("active-menu");
+
+  setTimeout(() => {
+    if (menuBtn.classList.contains("active-menu")) {
+      menuBtn.textContent = "close";
+    } else {
+      menuBtn.textContent = "menu";
+    }
+  }, 200);
 }
 
 menuBtn.addEventListener("click", menuClick);
