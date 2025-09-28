@@ -1,0 +1,430 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.section {
+  height: 100vh;
+  width: 100%;
+}
+
+/* navigation bar style */
+.navbar-container {
+  padding: 0.3rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+
+/* menu btn style */
+#menu-btn {
+  font-size: 2rem;
+  color: #3600be;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+#menu-btn.active-menu {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+/* menu btn style */
+/* menu list style */
+.navbar-menu-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 1rem 0.5rem;
+  margin: 0.2rem;
+  background-color: snow;
+  z-index: 998;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transform-origin: 100% 0;
+}
+
+.navbar-menu-container .navbar-menu-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar-menu-container .navbar-menu-list li {
+  padding: 0.5rem;
+  list-style-type: none;
+}
+
+.navbar-menu-container .navbar-menu-list li ul.contact li {
+  padding: 0.3rem;
+}
+
+.navbar-menu-container .navbar-menu-list li ul.contact li a {
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.navbar-menu-container.active-menu {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+}
+
+.navbar-menu-container .navigation {
+  position: relative;
+}
+
+.navbar-menu-container .navigation li {
+  color: #3600be;
+  list-style-type: none;
+  text-transform: capitalize;
+  font-weight: 450;
+  font-size: 0.8rem;
+}
+
+.navbar-menu-container .navigation li a {
+  text-decoration: none;
+  position: relative;
+}
+
+.navbar-menu-container .navigation li a::after {
+  content: " ";
+  width: 0;
+  background-color: #3600be;
+  height: 2px;
+  z-index: 999;
+  position: absolute;
+  bottom: -0.3rem;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.navbar-menu-container .navigation li a:hover::after {
+  width: 100%;
+}
+
+.navbar-menu-container .divider-menu {
+  color: #b0b0b0;
+  font-size: 0.7rem;
+}
+/* menu list style */
+
+/* navigation bar style end */
+
+/* style hero section */
+.hero-section {
+  /* warna background */
+  background: linear-gradient(
+      250deg,
+      rgba(176, 122, 218, 0) 45%,
+      rgba(133, 93, 215, 1) 65%
+    ),
+    linear-gradient(
+      360deg,
+      rgba(133, 93, 215, 1) 0%,
+      rgba(255, 255, 255, 0) 25%
+    ),
+    url(img/phainon.png) no-repeat,
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 2px,
+      transparent 1px,
+      transparent 40px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 2px,
+      transparent 1px,
+      transparent 40px
+    ),
+    linear-gradient(
+      135deg,
+      rgba(203, 129, 201, 1) 25%,
+      rgba(133, 93, 215, 1) 100%
+    );
+
+  background-size: 285%;
+  background-position: 55% 100%;
+}
+
+.hero-section .hero-element {
+  padding: 1rem;
+  min-height: 70vh;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.hero-section header.hero-header {
+  position: relative;
+}
+
+.hero-section header.hero-header h1 {
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+  font-size: 5rem;
+  font-weight: 400;
+  line-height: 4rem;
+}
+
+/* .hero-section h1 span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.hero-section header.hero-header span.sticker {
+  text-transform: uppercase;
+  display: inline-block;
+  font-family: "Lexend Peta", sans-serif;
+  color: white;
+  background: #3600be;
+  position: absolute;
+  top: 1.4rem;
+  line-height: 1;
+  font-size: 0.85rem;
+  padding: 0 1rem;
+}
+
+.hero-section .hero-description {
+  color: #3600be;
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding-bottom: 0.3rem;
+}
+
+.hero-section .btn {
+  border: 0.1rem solid white;
+}
+
+.hero-section .btn a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: white;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.hero-section .btn a {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: white;
+  font-weight: 500;
+}
+
+.hero-section .btn a:hover {
+  color: #855dd7;
+}
+
+.hero-section .btn a:hover::before {
+  width: 100%;
+}
+
+.hero-section .btn a p.hero-cta {
+  margin-right: 0.5rem;
+}
+
+/* style hero section end */
+/* style service section */
+.service-section {
+  /* background-color: #855dd7; */
+  background: linear-gradient(
+    0deg,
+    rgba(203, 129, 201, 1) 0%,
+    rgba(133, 93, 215, 1) 50%
+  );
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.service-section .service-header {
+  text-align: center;
+  text-transform: capitalize;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.service-section .service-detail-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  justify-items: center;
+}
+
+.service-section .service-detail-container .service-detail {
+  text-transform: capitalize;
+  color: snow;
+  padding: 0.8rem 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.service-section
+  .service-detail-container
+  .service-detail
+  .service-detail-logo
+  span {
+  font-size: 2rem;
+  background: #855dd7;
+  padding: 1rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background: #eee;
+  width: 80%;
+  margin: 0.5rem 0;
+}
+
+.service-section .service-detail-container .service-detail .icon {
+  width: 20%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(203, 129, 201, 0.5);
+  border-radius: 50%;
+  border: 1.5px dashed rgba(203, 129, 201, 1);
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.service-section
+  .service-detail-container
+  .service-detail
+  .service-detail-header {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.service-section
+  .service-detail-container
+  .service-detail
+  .service-detail-description
+  li {
+  list-style-type: none;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.service-section .service-detail-container .card-cta a {
+  font-size: 0.8rem;
+  color: snow;
+  text-decoration: none;
+}
+.service-section .service-detail-container .card-cta {
+  justify-self: flex-start;
+  background-color: #855dd7;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
+}
+
+/* style service section end */
+/* style service list section */
+.service-list-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: rgba(203, 129, 201, 1) ;
+}
+
+.service-list-section .child {
+  background-color: crimson;
+  margin: .5rem;
+}
+
+.service-list-section .service-list-header {
+  color: snow;
+  font-weight: 450;
+}
+
+.service-list-section .service-list-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  margin: 1rem;
+  padding: .8rem;
+}
+/* style service list section end */
