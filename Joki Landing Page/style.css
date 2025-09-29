@@ -3,14 +3,30 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+  text-transform: capitalize;
+  text-decoration: none;
+  list-style-type: none;
 }
 
 body {
   min-height: 100vh;
 }
 
+/* universal style */
+
+.section {
+  height: 100vh;
+  width: 100%;
+}
+
+.biru {
+  color: #3600be;
+}
+/* universal style end */
+
 /* navigation bar style */
-.navbar-container {
+.navbar {
   padding: 0.3rem;
   position: fixed;
   top: 0;
@@ -38,11 +54,11 @@ body {
 }
 /* menu btn style */
 /* menu list style */
-.navbar-menu-container {
+.navbar__menu {
   position: fixed;
   top: 0;
   right: 0;
-  padding: 1rem 0.5rem;
+  padding: 2rem 1.5rem;
   margin: 0.2rem;
   background-color: snow;
   z-index: 998;
@@ -59,27 +75,38 @@ body {
   transform-origin: 100% 0;
 }
 
-.navbar-menu-container .navbar-menu-list {
+.navbar__menu li a {
+  color: #3600be;
+}
+
+.navbar__menu--list {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
-.navbar-menu-container .navbar-menu-list li {
+.navbar__menu--list li {
   padding: 0.5rem;
   list-style-type: none;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
-.navbar-menu-container .navbar-menu-list li ul.contact li {
+.navbar__menu--divider {
+  padding: 1rem 0.5rem;
+  color: #b0b0b0;
+  font-size: 0.7rem;
+}
+
+.navbar__menu--contact li {
   padding: 0.3rem;
 }
 
-.navbar-menu-container .navbar-menu-list li ul.contact li a {
-  text-decoration: none;
+.navbar__menu--contact li a {
   font-size: 0.8rem;
 }
 
-.navbar-menu-container.active-menu {
+/* ini efek yang terjadi kalo tombol menu dipencet */
+.navbar__menu.active-menu {
   transform: scale(1);
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
@@ -87,24 +114,12 @@ body {
   -o-transform: scale(1);
 }
 
-.navbar-menu-container .navigation {
+/* ini efek pas dihover */
+.navbar__menu--list li a {
   position: relative;
 }
 
-.navbar-menu-container .navigation li {
-  color: #3600be;
-  list-style-type: none;
-  text-transform: capitalize;
-  font-weight: 450;
-  font-size: 0.8rem;
-}
-
-.navbar-menu-container .navigation li a {
-  text-decoration: none;
-  position: relative;
-}
-
-.navbar-menu-container .navigation li a::after {
+.navbar__menu--list li a::after {
   content: " ";
   width: 0;
   background-color: #3600be;
@@ -120,21 +135,16 @@ body {
   -o-transition: all 0.3s ease-in-out;
 }
 
-.navbar-menu-container .navigation li a:hover::after {
-  width: 100%;
+.navbar__menu--list li a:hover::after {
+  width: 105%;
 }
 
-.navbar-menu-container .divider-menu {
-  color: #b0b0b0;
-  font-size: 0.7rem;
-}
-/* menu list style */
+/* menu list style end */
 
 /* navigation bar style end */
 
 /* style hero section */
-.hero-section {
-  height: 100vh;
+.hero {
   /* warna background */
   background: linear-gradient(
       250deg,
@@ -171,7 +181,8 @@ body {
   background-position: 55% 100%;
 }
 
-.hero-section .hero-element {
+/* ini yang isinya text, description & button cta */
+.hero__element {
   padding: 1rem;
   min-height: 70vh;
   max-width: 100%;
@@ -181,11 +192,11 @@ body {
   flex-direction: column;
 }
 
-.hero-section header.hero-header {
+.hero__element--header {
   position: relative;
 }
 
-.hero-section header.hero-header h1 {
+.hero__element--header h1 {
   font-family: "Bebas Neue", sans-serif;
   color: white;
   font-size: 5rem;
@@ -193,13 +204,7 @@ body {
   line-height: 4rem;
 }
 
-/* .hero-section h1 span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-.hero-section header.hero-header span.sticker {
+.hero__element--sticker {
   text-transform: uppercase;
   display: inline-block;
   font-family: "Lexend Peta", sans-serif;
@@ -212,7 +217,7 @@ body {
   padding: 0 1rem;
 }
 
-.hero-section .hero-description {
+.hero__element--description {
   color: #3600be;
   font-size: 0.7rem;
   font-weight: 400;
@@ -220,11 +225,11 @@ body {
   padding-bottom: 0.3rem;
 }
 
-.hero-section .btn {
+.hero__element--btn {
   border: 0.1rem solid white;
 }
 
-.hero-section .btn a::before {
+.hero__element--btn a::before {
   content: "";
   position: absolute;
   top: 0;
@@ -240,7 +245,7 @@ body {
   z-index: -1;
 }
 
-.hero-section .btn a {
+.hero__element--btn a {
   z-index: 1;
   position: relative;
   width: 100%;
@@ -260,23 +265,21 @@ body {
   font-weight: 500;
 }
 
-.hero-section .btn a:hover {
+.hero__element--btn a:hover {
   color: #855dd7;
 }
 
-.hero-section .btn a:hover::before {
+.hero__element--btn a:hover::before {
   width: 100%;
 }
 
-.hero-section .btn a p.hero-cta {
+.hero-cta {
   margin-right: 0.5rem;
 }
 
 /* style hero section end */
-/* style service section */
-.service-section {
-  height: 100vh;
-  width: 100%;
+/* style benefit section */
+.benefit {
   /* background-color: #855dd7; */
   background: linear-gradient(
     0deg,
@@ -290,7 +293,7 @@ body {
   align-items: center;
 }
 
-.service-section .service-header {
+.benefit__header {
   text-align: center;
   text-transform: capitalize;
   color: white;
@@ -298,7 +301,7 @@ body {
   font-weight: 600;
 }
 
-.service-section .service-detail-container {
+.benefit__list {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -307,7 +310,7 @@ body {
   justify-items: center;
 }
 
-.service-section .service-detail-container .service-detail {
+.benefit__list--item {
   text-transform: capitalize;
   color: snow;
   padding: 0.8rem 0;
@@ -322,11 +325,7 @@ body {
   position: relative;
 }
 
-.service-section
-  .service-detail-container
-  .service-detail
-  .service-detail-logo
-  span {
+.benefit__list--logo span {
   font-size: 2rem;
   background: #855dd7;
   padding: 1rem;
@@ -339,63 +338,66 @@ body {
 
 .divider {
   border: none;
-  height: 1px;
+  height: 2px;
   background: #eee;
-  width: 80%;
+  width: 100%;
   margin: 0.5rem 0;
+  opacity: 0.3;
 }
 
-.service-section .service-detail-container .service-detail .icon {
-  width: 20%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: rgba(203, 129, 201, 0.5);
-  border-radius: 50%;
-  border: 1.5px dashed rgba(203, 129, 201, 1);
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-}
-
-.service-section
-  .service-detail-container
-  .service-detail
-  .service-detail-header {
+.benefit__list--header {
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
-.service-section
-  .service-detail-container
-  .service-detail
-  .service-detail-description
-  li {
-  list-style-type: none;
+.benefit__list--description {
   font-weight: 400;
   font-size: 0.8rem;
 }
 
-.service-section .service-detail-container .card-cta a {
+.benefit__cta a {
   font-size: 0.8rem;
   color: snow;
   text-decoration: none;
 }
-.service-section .service-detail-container .card-cta {
+.benefit__cta {
   justify-self: flex-start;
   background-color: #855dd7;
-  padding: 0.5rem;
-  border-radius: 0.2rem;
-  -webkit-border-radius: 0.2rem;
-  -moz-border-radius: 0.2rem;
-  -ms-border-radius: 0.2rem;
-  -o-border-radius: 0.2rem;
+  padding: 0.8rem 0.5rem;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
 }
 
 /* style service section end */
+/* style service list section */
+.service {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: rgba(203, 129, 201, 1);
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.service__header {
+  color: snow;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.service__list {
+  display: grid;
+  padding: 0.8rem;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+}
+
+.service__list--item {
+  background-color: snow;
+  padding: 0.5rem;
+}
+/* style service list section end */

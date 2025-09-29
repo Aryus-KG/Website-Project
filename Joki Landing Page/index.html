@@ -22,48 +22,40 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav class="navbar-container">
-      <div class="navbar-btn-container">
-        <span id="menu-btn" class="material-symbols-outlined"> menu </span>
-      </div>
+    <nav class="navbar">
+      <span id="menu-btn" class="material-symbols-outlined"> menu </span>
     </nav>
-    <div class="navbar-menu-container" id="navbar-menu-container">
-      <ul class="navbar-menu-list">
-        <li>
-          <ul class="navigation">
-            <li><a href="">home</a></li>
-            <li><a href="">about</a></li>
-            <li><a href="">contact</a></li>
-            <li><a href="">contact</a></li>
-          </ul>
-        </li>
-        <li>
-          <div class="divider-menu">Kontak kami</div>
-        </li>
-        <li>
-          <ul class="contact">
-            <li><a href="">+62 123 456 789</a></li>
-            <li><a href="">@myInstagram</a></li>
-          </ul>
-        </li>
+    <div class="navbar__menu" id="navbar__menu">
+      <ul class="navbar__menu--list">
+        <li><a href="#hero">home</a></li>
+        <li><a href="#benefit">about us</a></li>
+        <li><a href="#service">our service</a></li>
+        <li><a href="">contact</a></li>
+      </ul>
+
+      <div class="navbar__menu--divider">Kontak kami</div>
+
+      <ul class="navbar__menu--contact">
+        <li><a href="">+62 123 456 789</a></li>
+        <li><a href="">@myInstagram</a></li>
       </ul>
     </div>
     <!-- navbar end -->
 
     <!-- hero section -->
-    <section class="hero-section section">
-      <div class="hero-element">
-        <header class="hero-header">
-          <span class="sticker">nguli</span>
+    <section class="hero section" id="hero">
+      <div class="hero__element">
+        <header class="hero__element--header">
+          <span class="hero__element--sticker">nguli</span>
           <h1>stellar jade ga perlu capek!</h1>
         </header>
-        <div class="hero-description">
+        <div class="hero__element--description">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
             laboriosam!
           </p>
         </div>
-        <div class="btn">
+        <div class="hero__element--btn">
           <a href="#"
             ><p class="hero-cta">order now</p>
             <span class="material-symbols-outlined"> arrow_forward </span></a
@@ -72,78 +64,78 @@
       </div>
     </section>
     <!-- hero section -->
-    <!-- detail layanan -->
-    <section class="service-section section">
-      <div class="service-header">Mengapa memilih kami?</div>
-      <div class="service-detail-container">
+    <!-- benefit layanan -->
+    <section id="benefit" class="benefit section">
+      <h1 class="benefit__header">Mengapa memilih kami?</h1>
+      <div class="benefit__list">
         <!-- ini card -->
-        <div class="service-detail first-card">
-          <div class="service-detail-logo">
+        <!-- first card -->
+        <div class="benefit__list--item">
+          <div class="benefit__list--logo">
             <span class="material-symbols-outlined"> encrypted_add </span>
           </div>
-          <div class="service-detail-info">
-            <div class="service-detail-header">hello world</div>
-            <div class="service-detail-description">
-              <ul>
-                <li>Lorem ipsum dolor sit.</li>
-              </ul>
-            </div>
+          <div class="benefit__list--info">
+            <h1 class="benefit__list--header">hello world</h1>
+            <div class="divider"></div>
+            <p class="benefit__list--description">Lorem ipsum dolor sit.</p>
           </div>
         </div>
 
-        <div class="service-detail second-card">
-          <div class="service-detail-logo">
+        <!-- second card -->
+        <div class="benefit__list--item">
+          <div class="benefit__list--logo">
             <span class="material-symbols-outlined"> timer </span>
           </div>
-          <div class="service-detail-info">
-            <div class="service-detail-header">hello world</div>
-            <div class="service-detail-description">
-              <ul>
-                <li>Lorem ipsum dolor sit.</li>
-              </ul>
-            </div>
+          <div class="benefit__list--info">
+            <h1 class="benefit__list--header">hello world</h1>
+            <div class="divider"></div>
+            <p class="benefit__list--description">Lorem ipsum dolor sit.</p>
           </div>
         </div>
 
-        <div class="service-detail third-card">
-          <div class="service-detail-logo">
+        <!-- third card -->
+        <div class="benefit__list--item">
+          <div class="benefit__list--logo">
             <span class="material-symbols-outlined"> person_edit </span>
           </div>
-          <div class="service-detail-info">
-            <div class="service-detail-header">hello world</div>
-            <div class="service-detail-description">
-              <ul>
-                <li>Lorem ipsum dolor sit.</li>
-              </ul>
-            </div>
+          <div class="benefit__list--info">
+            <h1 class="benefit__list--header">hello world</h1>
+            <div class="divider"></div>
+            <p class="benefit__list--description">Lorem ipsum dolor sit.</p>
           </div>
         </div>
 
-        <div class="service-detail fourth-card">
-          <div class="service-detail-logo">
+        <!-- forth card -->
+        <div class="benefit__list--item">
+          <div class="benefit__list--logo">
             <span class="material-symbols-outlined"> attach_money </span>
           </div>
-          <div class="service-detail-info">
-            <div class="service-detail-header">hello world</div>
-            <div class="service-detail-description">
-              <ul>
-                <li>Lorem ipsum dolor sit.</li>
-              </ul>
-            </div>
+          <div class="benefit__list--info">
+            <h1 class="benefit__list--header">hello world</h1>
+            <div class="divider"></div>
+            <p class="benefit__list--description">Lorem ipsum dolor sit.</p>
           </div>
         </div>
         <!-- ini card -->
         <!-- ini cta -->
-        <div class="card-cta">
+        <div class="benefit__cta">
           <a href="#"><p>lorem ipsum button</p></a>
         </div>
         <!-- ini cta end -->
       </div>
     </section>
     <!-- detail layanan end -->
-    <!-- testimoni -->
-    <section class="testimonial-section section"></section>
-    <!-- testimoni end-->
+    <!-- service list -->
+    <section id="service" class="service section">
+      <h1 class="service__header">jasa populer kami!</h1>
+      <div class="service__list">
+        <div class="service__list--item">hero-header</div>
+        <div class="service__list--item">material-symbols-outlined</div>
+        <div class="service__list--item">material-symbols-outlined</div>
+        <div class="service__list--item">material-symbols-outlined</div>
+      </div>
+    </section>
+    <!-- service list end -->
     <!-- footer -->
     <footer class="footer"></footer>
     <!-- footer end -->

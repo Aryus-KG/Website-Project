@@ -1,5 +1,5 @@
 const menuBtn = document.querySelector("#menu-btn");
-const navbarMenu = document.querySelector("#navbar-menu-container");
+const navbarMenu = document.querySelector("#navbar__menu");
 
 function menuClick() {
   menuBtn.classList.toggle("active-menu");
@@ -11,7 +11,7 @@ function menuClick() {
     } else {
       menuBtn.textContent = "menu";
     }
-  }, 200);
+  }, 100);
 }
 
 menuBtn.addEventListener("click", menuClick);
