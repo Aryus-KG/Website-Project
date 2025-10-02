@@ -26,7 +26,7 @@ const testimoniContainer = document.querySelector(".testimoni__list");
 let testiIndex = 0;
 
 function testiGeser() {
-  testimoniContainer.style.transform = `translateX(-${testiIndex * 100}%)`;
+  testimoniContainer.style.transform = `translateX(-${testiIndex * 25}%)`;
 }
 
 arrowNext.onclick = () => {
