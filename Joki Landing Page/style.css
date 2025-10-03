@@ -499,7 +499,9 @@ body {
 .testimoni__wrapper {
   height: 50%;
   width: 90%;
-  overflow: hidden;
+  overflow-x: hidden;
+  border: 1.4px solid black;
+  border-radius: 0.5rem;
 }
 
 .testimoni__list {
@@ -515,7 +517,7 @@ body {
 }
 
 .testimoni__list--item {
-  border: 1.4px solid black;
+  position: relative;
   min-height: 100%;
   flex: 0 0 25%;
   min-width: 25%;
@@ -526,13 +528,14 @@ body {
   justify-content: center;
   /* margin:  0 0.5rem; */
   padding: 0.5rem;
-  border-radius: 0.5rem;
-  -webkit-border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  -ms-border-radius: 0.5rem;
-  -o-border-radius: 0.5rem;
+  border: 2px solid #eee;
 }
 
+.testimoni__list--name {
+  position: absolute;
+  top: -10px;
+  left: 0;
+}
 .testimoni__list--item:first-child {
   margin-left: 0;
 }
@@ -568,6 +571,11 @@ body {
   -o-border-radius: 999px;
 }
 
+.testimoni__arrow span:hover {
+  color: #eee;
+}
+
+
 .testimoni__arrow span {
   color: snow;
 }
@@ -578,6 +586,7 @@ body {
   height: 40vh;
   display: flex;
   flex-direction: column;
+  
 }
 
 .footer__social {
@@ -601,12 +610,38 @@ padding: .5rem;
 }
 
 .footer__info {
+  background-color: #cb81c9;
   display: flex;
   flex: 1;
   padding: .5rem;
+  justify-content: center;
+  align-items: flex-start;
 }
 
+.footer__info div {
+ margin: 0 1rem; 
+}
+/* .footer__info--header {
+ background-color: red; 
+} */
 .footer__info--header h1 {
   font-size: 1.5rem;
+  color: snow;
+}
+.footer__info--header p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: snow;
+}
+
+.footer__info--menu h1 {
+  font-size: 1.2rem;
+  color: #ffc038;
+}
+
+.footer__info--menu li {
+  color: snow;
+  font-size: 1rem;
+  font-weight: 500;
 }
 /* style footer end */
