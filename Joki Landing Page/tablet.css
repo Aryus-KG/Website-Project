@@ -1,0 +1,14 @@
+@media (min-width: 768px) {
+  .hero {
+    background-size: 250%;
+  }
+
+  .hero__element {
+    min-height: 90vh;
+    max-width: 70%;
+  }
+
+  .benefit__header {
+    background-color: red;
+  }
+}
