@@ -8,7 +8,44 @@
     max-width: 70%;
   }
 
-  .benefit__header {
-    background-color: red;
+  .benefit__list--item {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .benefit__list--item div {
+    margin: 0.8rem 0;
+  }
+  .benefit__cta a {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .benefit__cta {
+    padding: 2rem 2rem;
+  }
+
+  .service__list--item img {
+    width: 40%;
+  }
+
+  .footer__info {
+    flex: 1;
+  }
+
+  .footer__info--menu {
+    margin: 0 0 2rem 0;
+  }
+
+  .footer__social {
+    margin: 0;
+  }
+  .footer__social a {
+    margin: 0;
+  }
+
+  .footer__wrapper h1 {
+    font-weight: 500;
   }
 }
