@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+
+.color-container {
+  transition: background .3s ease;
+  padding: 1rem;
+  background: rgb(255,255,255);
+  width: 80%;
+  height: 80%;
+  border: 5px solid black;
+}
+
+#btn {
+  padding: 1rem;
+}
