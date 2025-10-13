@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hitung Harga</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- css -->
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font -->
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Penghitung Harga</h1>
+      <div class="wrapper">
+        <form id="form">
+          <ul>
+            <li>
+              <label for="durasi">Masukkan Durasi (HH:MM):</label>
+              <input
+                id="durasi"
+                type="text"
+                autocomplete="off"
+                placeholder="Masukkan Durasi"
+              />
+            </li>
+            <li>
+              <label for="tipe">Tipe Jasa :</label>
+              <select name="tipe" id="tipe">
+                <option value="rawat">Rawat Akun</option>
+                <option value="eksplorasi">Eksplorasi</option>
+                <option value="quest">Quest</option>
+              </select>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <button type="submit" id="btn">Hitung</button>
+      <p class="subtitle">Harga Per Jam Adalah :</p>
+      <p id="price-label"></p>
+    </div>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <!-- JavaScript -->
+  </body>
+</html>
